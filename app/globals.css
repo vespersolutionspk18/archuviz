@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'FF Neuwelt Bold';
+  src: url('/fonts/ff-neuwelt-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #191517;
+  --foreground: #ffffff;
+  --ablack: #191517;
+  --ared: #ec1c24;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-ablack: var(--ablack);
+  --color-ared: var(--ared);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #191517;
+    --foreground: #ffffff;
+    --ablack: #191517;
+    --ared: #ec1c24;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  letter-spacing: -0.05em;
+  line-height: 1.25;
+}
+
+@layer utilities {
+  .font-logo {
+    font-family: 'FF Neuwelt Bold', sans-serif;
+  }
+  .font-mono {
+    font-family: var(--font-ibm-plex-mono), monospace;
+  }
+}
